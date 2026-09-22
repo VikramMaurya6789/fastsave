@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: fastsave
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: FASTSAVE_SECRET
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false
+      - key: RATE_LIMIT_ANALYZE_PER_MIN
+        value: "20"
+      - key: RATE_LIMIT_DEFAULT_PER_MIN
+        value: "60"
+      - key: CORS_ORIGINS
+        value: "*"
