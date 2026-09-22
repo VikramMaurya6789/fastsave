@@ -1,4 +1,0 @@
-git commit -m "FastSave initial"
-git branch -M main
-git remote add origin <tumhara-repo-url>
-git push -u origin main
